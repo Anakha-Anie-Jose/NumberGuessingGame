@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="=UTF_8">
+    <meta lang="en">
+    <title>APPU'S NUMBER GUESSING NAME</title>
+    <link rel="stylesheet"
+        type="text/css"
+         href="NumberGuessingGame.css">
+    </head>
+    
+</head>
+<body>
+    <div>
+<h1>NUMBER GUESSING GAME</h1>
+<h3>Welcome to my number guessing game!!</h3>
+<p>Enter any number from 1 to 100</p>
+<label>Enter number:</label>
+<input id="in" type="number" onfocus="this.value=''"><br><br>
+<button id="btn">Try Me</button>
+</div>
+<script type="text/javascript" >var guess=Math.floor(Math.random()*100+1);
+    var count=1;
+    document.getElementById("btn").onclick=function(){
+      var n=document.getElementById("in").value;
+      if(n == guess)
+        {
+          alert("Huray!!! you got the answer in "+count+" guess/es");
+        }
+      else if(n > guess)
+        {
+          alert("Ooops!!Guess a smaller number");
+          count++;
+        }
+      else
+        {
+          alert("Ooops!!guess a greater number");
+          count++;
+        }
+    }
+    </script>
+</body>
